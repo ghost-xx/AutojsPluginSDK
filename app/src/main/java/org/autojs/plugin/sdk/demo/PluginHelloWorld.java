@@ -27,4 +27,8 @@ public class PluginHelloWorld extends Plugin {
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 
+    @Override
+    public ComponentName getService() {
+        return new ComponentName("org.autojs.plugin.sdk.demo", HelloworldPluginService.class.getName());
+    }
 }

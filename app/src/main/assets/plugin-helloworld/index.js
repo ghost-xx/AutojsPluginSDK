@@ -12,5 +12,12 @@ module.exports = function(plugin){
         plugin.say(message);
     }
 
+    helloworld.remoteAdd = function (a, b) {
+        return plugin.waitForConnection().call('add', {
+          a: a,
+          b: b
+        }, null).get('sum');
+    }
+
     return helloworld;
 }

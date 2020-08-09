@@ -1,15 +1,16 @@
 package org.autojs.plugin.sdk;
 
 import android.content.Context;
-import android.support.annotation.Keep;
 import android.util.Log;
+
+import androidx.annotation.Keep;
 
 import java.util.HashMap;
 
 public abstract class PluginRegistry {
 
     private static final String NAME_DEFAULT = "::default";
-    static final int VERSION = 1;
+    static final int VERSION = 2;
     private static final String LOG_TAG = "Plugin";
     private static HashMap<String, PluginLoader> sPluginLoaders = new HashMap<>();
 

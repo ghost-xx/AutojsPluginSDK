@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="org.autojs.plugin.sdk.demo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.autojs.plugin.sdk.demo">
 
     <application
         android:allowBackup="true"
@@ -13,10 +13,14 @@
 
         <meta-data
             android:name="org.autojs.plugin.sdk.registry"
-            android:value="org.autojs.plugin.sdk.demo.MyPluginRegistry"/>
+            android:value="org.autojs.plugin.sdk.demo.MyPluginRegistry" />
 
         <activity
             android:name=".HelloWorldActivity"
-            android:exported="true"/>
+            android:exported="true" />
+
+        <service
+            android:name=".HelloworldPluginService"
+            android:exported="true" />
     </application>
 </manifest>
