@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+    
 jobs:
   build:
 
@@ -24,16 +24,15 @@ jobs:
     - name: Grant execute permission for Gradlew
       run: chmod +x ./gradlew
 
-    # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: ./gradlew build --info  # 添加 --info 以获取详细信息
 
-    # 新增步骤：列出 build/libs 目录内容
+    # 列出 build/libs 目录内容
     - name: List build/libs directory
-      run: ls -la build/libs
+      run: ls -la build/libs || echo "No JAR files found in build/libs"
 
   dependency-submission:
 
@@ -49,7 +48,6 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    # Setting up Gradle 7.1
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
       with:
