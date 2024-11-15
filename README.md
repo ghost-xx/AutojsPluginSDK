@@ -1,4 +1,4 @@
-# Auto.js-Plugin-SDK
+# Auto.js-Plugin-SDK0.2
 
 
 #插件配置# 
