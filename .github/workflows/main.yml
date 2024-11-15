@@ -1,6 +1,4 @@
 name: android_build
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
 
 on:
   workflow_dispatch:
