@@ -19,12 +19,12 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Upload app directory
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: app-directory
         path: app/build/outputs/apk
     - name: Upload sdk directory
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: sdk-directory
         path: sdk/build/outputs/aar
