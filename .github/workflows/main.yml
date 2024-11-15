@@ -20,8 +20,7 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v2
-        with:
-          android-api-level: 28
+        # 移除了不支持的 android-api-level 参数
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
