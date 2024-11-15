@@ -22,9 +22,9 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: app-directory
-        path: app/
+        path: app/build/outputs/apk
     - name: Upload sdk directory
       uses: actions/upload-artifact@v3
       with:
         name: sdk-directory
-        path: sdk/
+        path: sdk/build/outputs/aar
