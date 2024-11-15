@@ -1,4 +1,6 @@
 name: android_build
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
 
 on:
   workflow_dispatch:
@@ -12,8 +14,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '8' # 确保使用的版本支持Node.js 20
-          distribution: 'adopt' # 例如使用 AdoptOpenJDK
+          java-version: '8'
+          distribution: 'adopt'
       - id: get-project
         name: Get project name
         run: echo "::set-output name=PROJECT::$(cat project-to-build)"
